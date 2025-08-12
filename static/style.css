@@ -1,0 +1,42 @@
+/* basic reset + look */
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Segoe UI,Arial,sans-serif;
+  color:#fff;
+  background:#051428;
+}
+
+/* rain overlay */
+.rain{
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background-image:url('https://i.ibb.co/mTXmZyV/rain.png');
+  background-size:cover;opacity:0.35;pointer-events:none;z-index:0;
+}
+
+/* header */
+header{
+  padding:18px;background:rgba(0,0,0,0.45);text-align:center;font-weight:700;
+}
+
+/* owner button */
+.owner-btn{
+  margin-left:8px;padding:6px 12px;border-radius:6px;border:none;background:#ff7e5f;color:#fff;
+  cursor:pointer;
+}
+
+/* container / boxes */
+.container{display:flex;flex-wrap:wrap;justify-content:center;padding:18px;gap:18px;z-index:2;position:relative;}
+.box{width:260px;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));border-radius:12px;padding:12px;box-shadow:0 6px 18px rgba(0,0,0,0.6);}
+.box img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+.box h3{margin:10px 0 6px}
+
+/* login box */
+.login-box{background:rgba(0,0,0,0.6);padding:18px;border-radius:10px;max-width:360px;margin:32px auto;z-index:2;position:relative;}
+.login-box input{width:100%;padding:10px;margin:6px 0;border-radius:6px;border:none}
+
+/* admin table */
+table{width:100%;border-collapse:collapse}
+
+/* small utilities */
+button{cursor:pointer}
