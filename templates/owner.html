@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Owner Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body data-bg="https://wallpaperaccess.com/full/2637581.jpg">
+  <script>
+    document.addEventListener("DOMContentLoaded", ()=> {
+      document.body.style.backgroundImage = `url('${document.body.getAttribute("data-bg")}')`;
+    });
+  </script>
+
+  <div class="rain"></div>
+
+  <div class="scrolling-name">🌟 ROWEDY KIING 🌟</div>
+  <div class="welcome">WELCOME BY OWNER ROWEDY KIING</div>
+
+  <header>Owner Rowedy King</header>
+
+  <div class="login-box">
+    <h3>Login / Register</h3>
+    <form method="post" action="/submit">
+      <input type="text" name="realname" placeholder="My Name" required>
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <div style="margin-top:10px">
+        <button type="submit">Next</button>
+      </div>
+    </form>
+    <div style="margin-top:8px">
+      <button onclick="location.href='/admin'">Admin Login</button>
+    </div>
+  </div>
+
+</body>
+        </html>
